@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Staatliches&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-    --scheme-color: #fafafa;
-    /* --scheme-color: #1A2744; */
+    --scheme-color: #1A2744;
     --scheme-color-orange: #FB770D;
     --text-color: #fafafa;
     --footer: #455781;
@@ -27,9 +26,9 @@ body {
 }
 
 main {
-    /* width: 83vw; */
+    width: 83vw;
     margin: 0 auto;
-    color: var(--black);
+    color: var(--text-color);
 }
 
 #me {
@@ -37,7 +36,7 @@ main {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    /* margin: 0; */
+    margin: 0;
 }
 
 #vaardigheden,
@@ -78,8 +77,8 @@ main {
     font-size: clamp(1.3rem, 8vw, 1.2rem);
 }
 
-img {
-    width: 100%;
+#photo img {
+    width: 60%;
     border-radius: 30px;
 }
 
@@ -300,7 +299,7 @@ footer svg {
     body {
         text-align: start;
     }
-    main section:not(:first-child) {
+    main {
         width: 50vw;
         margin: 0 auto;
     }
@@ -341,50 +340,3 @@ footer svg {
         margin: 0 auto;
     }
 }
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-columns: 30% 30% 40%; */
-    /* gap: 10px; */
-    height: 100vh;
-    margin-top: -1.2em;
-}
-
-.wrapper>div {
-    padding: 1em;
-}
-
-.one {
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-    background-color: #FFFFFF;
-}
-
-.two {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-    /* background-image: url("../img/tetto.png"); */
-    background-color: #FFFFFF;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-/* .two {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-    background-image: url("../img/tetto.png");
-    background-color: #FFFFFF;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
-/* .three {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    background-color: #262626;
-} */
