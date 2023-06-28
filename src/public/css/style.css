@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Staatliches&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Staatliches&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+    --scheme-color: #fafafa;
+    /* --scheme-color: #1A2744; */
+    --scheme-color-orange: #FB770D;
+    --text-color: #fafafa;
+    --footer: #455781;
+    --blue: #45ADFF;
+    --black: #212121;
+}
+
 *,
 *::before,
 *::after {
@@ -11,56 +21,40 @@ html,
 body {
     height: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: var(--scheme-color);
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-h1 {
-    font-family: 'Staatliches', cursive;
-    /* font-family: 'Mitr', sans-serif; */
-    font-size: clamp(4.5rem, 10vw, 2rem);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-family: 'Mitr', sans-serif;
-}
-
-p {
-    font-size: clamp(1.5rem, 8vw, 1.2rem);
-    margin-bottom: 1rem;
+    scroll-behavior: smooth;
 }
 
 main {
-    width: 70vw;
+    /* width: 83vw; */
     margin: 0 auto;
-    min-width: 500px;
+    color: var(--black);
 }
 
-#aboutme,
-#vaardigheden,
-#ervaring,
-#educatie {
-    height: 100vh;
-    color: white;
-    padding: 4rem 0;
-}
-
-#werk {
-    color: white;
+#me {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
+    /* margin: 0; */
+}
+
+#vaardigheden,
+#werk,
+#ervaringen,
+#opleidingen,
+#contact {
+    height: 100%;
+    padding: 4rem 0;
 }
 
 #aboutme {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
+    padding: 4rem 0;
 }
 
 #personal {
@@ -69,11 +63,22 @@ main {
     flex-direction: column;
 }
 
-#photo {
-    width: 60%;
+#ervaringen p,
+#opleidingen p,
+#contact p {
+    font-size: clamp(0.5rem, 8vw, 1.2rem);
+    font-style: italic;
 }
 
-#photo img {
+#ervaringen h3,
+#opleidingen h2,
+#contact h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.3rem, 8vw, 1.2rem);
+}
+
+img {
     width: 100%;
     border-radius: 30px;
 }
@@ -97,7 +102,7 @@ span {
 
 .project {
     position: relative;
-    color: white;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,67 +128,171 @@ span {
     transition: transform .2s, filter .2s;
 }
 
-.project:hover>img {
-    transform: scale(1.05) rotate(2deg);
-    filter: brightness(50%);
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+h1 {
+    font-family: "Staatliches", cursive;
+    font-size: clamp(3.5rem, 10vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: "Mitr", sans-serif;
+}
+
+p {
+    font-size: clamp(1.5rem, 8vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+li {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: var(--scheme-color-orange);
+    border-radius: 1em 1em 1em 1em;
+    padding: .2rem;
+    border: none;
+}
+
+.btnB {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: var(--scheme-color);
+    border-radius: 1em 1em 1em 1em;
+    padding: .2rem;
+    border: none;
+    display: none;
+}
+
+.wrap {
+    display: none;
+}
+
+.wrap img {
+    height: 40px;
+    margin: 0 auto;
+    line-height: 60px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translate(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 40px;
+    margin: .5rem 0;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: var(--text-color);
+    border-radius: 30px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: var(--blue);
+    border-radius: 30px;
 }
 
 footer {
-    background-color: #455781;
-    min-height: 20vh;
+    background-color: var(--footer);
+    min-height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--text-color);
     flex-direction: column;
-    width: 100%;
+    text-align: center;
 }
 
 footer ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 50vw;
+    justify-content: space-around;
 }
 
 footer li {
     list-style-type: none;
-    width: 3em;
+    width: 2em;
     margin: 10px;
 }
 
-.spotify:hover {
-    fill: red;
+footer p {
+    font-size: 1.4rem;
 }
 
-@media (prefers-color-scheme: dark) {
-     :root {
-        --primary: 92, 74, 216;
-        --scheme-color: #1A2744;
-        --scheme-primary: #0E494D;
-        --scheme-text: #0C3F42;
-        --scheme-secondary: #E2AE5A;
-        --text-color: #eeeeee;
-        --blue: #45ADFF;
-        --green: #73FFE0;
-        --red: #FF8975;
-        --black: #212121;
+footer svg {
+    fill: var(--text-color);
+}
+
+#links {
+    width: 83vw;
+    margin: 0 auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .project:hover>img {
+        transform: scale(1.05) rotate(2deg);
+        filter: brightness(50%);
+    }
+    .btn:hover {
+        background-color: #FFA45B;
+        cursor: pointer;
+    }
+    .btnB:hover {
+        background-color: var(--blue);
+        cursor: pointer;
+    }
+    .btnL:hover {
+        background-color: #2ecc71;
+        cursor: pointer;
+    }
+    .github:hover {
+        fill: #333;
+    }
+    .linkedin:hover {
+        fill: #0077b5;
+    }
+    .instagram:hover {
+        fill: #e1306c;
     }
 }
 
-@media (prefers-color-scheme: light) {
-     :root {
-        --primary: 0, 132, 255;
-        --scheme-color: #F4F4FB;
-        --scheme-primary: #E2AE5A;
-        --scheme-text: #D4A04C;
-        --scheme-secondary: #0E494D;
-        --text-color: #252525;
-        --orange: #E18643;
-        --blue: #008FFF;
-        --green: #50E3C2;
-        --red: #FF5436;
-        --black: #212121;
+@media all and (max-width: 500px) {
+    #photo img {
+        width: 100%;
+        border-radius: 30px;
     }
 }
 
@@ -191,15 +300,13 @@ footer li {
     body {
         text-align: start;
     }
-    main {
+    main section:not(:first-child) {
         width: 50vw;
-        min-width: 960px;
         margin: 0 auto;
     }
-    #aboutme {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    #info {
+        width: 100%;
+        margin-top: 0;
     }
     #personal {
         display: flex;
@@ -208,4 +315,76 @@ footer li {
         gap: 2rem;
         width: 100%;
     }
+    .wrap img {
+        height: 40px;
+        margin: 0 auto;
+        line-height: 60px;
+        position: absolute;
+        bottom: 40px;
+    }
+    #photo img {
+        width: 100%;
+        border-radius: 30px;
+    }
+    .wrap {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    #me {
+        height: 100vh;
+    }
+    #links {
+        width: 50vw;
+        margin: 0 auto;
+    }
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 30% 30% 40%; */
+    /* gap: 10px; */
+    height: 100vh;
+    margin-top: -1.2em;
+}
+
+.wrapper>div {
+    padding: 1em;
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    background-color: #FFFFFF;
+}
+
+.two {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    /* background-image: url("../img/tetto.png"); */
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* .two {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    background-image: url("../img/tetto.png");
+    background-color: #FFFFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+/* .three {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    background-color: #262626;
+} */
