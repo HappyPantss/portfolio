@@ -31,6 +31,10 @@ main {
     color: var(--text-color);
 }
 
+.text>h3:first-of-type {
+    margin-bottom: 1rem;
+}
+
 #me {
     display: flex;
     justify-content: center;

@@ -1,1 +1,8 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><defs><style>.cls-1{fill:#1a2744;}.cls-2{fill:#45adff;}</style></defs><title>Artboard 1 copy 3</title><rect class="cls-1" width="500" height="500" rx="30.11"/><polygon class="cls-2" points="147.29 346.03 112.22 368.29 380.62 428.23 358.35 393.16 147.29 346.03"/><polygon class="cls-2" points="273.75 205.12 233.22 196.06 380.62 428.23 389.67 387.69 273.75 205.12"/><polygon class="cls-2" points="353.25 153.95 388.32 131.69 119.92 71.75 142.19 106.82 353.25 153.95"/><polygon class="cls-2" points="226.79 294.86 267.32 303.92 119.92 71.75 110.87 112.29 226.79 294.86"/></svg>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1080" height="1080" rx="60" fill="#1A2744"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M700 700H600V740C600 773.137 626.863 800 660 800H700H800H900H950C977.614 800 1000 777.614 1000 750C1000 722.386 977.614 700 950 700H900H800H700Z" fill="#45ADFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M600 500H700H800H850C877.614 500 900 522.386 900 550C900 577.614 877.614 600 850 600H800H700H600V500Z" fill="#45ADFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M660 300C626.863 300 600 326.863 600 360V400H700H800H900H950C977.614 400 1000 377.614 1000 350C1000 322.386 977.614 300 950 300H900H800H700H660Z" fill="#45ADFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M160 300C126.863 300 100 326.863 100 360V400H200H300H400H450C477.614 400 500 377.614 500 350C500 322.386 477.614 300 450 300H400H300H200H160Z" fill="#45ADFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M300 500H400H440C473.137 500 500 526.863 500 560V600V700V740C500 773.137 473.137 800 440 800H400H300H200H150C122.386 800 100 777.614 100 750C100 722.386 122.386 700 150 700H200H300H400V600H300H200V500H300Z" fill="#45ADFF"/>
+</svg>
