@@ -20,3 +20,9 @@ function switchToBlue() {
 
 btn.addEventListener("click", switchToOrange)
 btnB.addEventListener("click", switchToBlue)
+
+import { Application } from '@splinetool/runtime';
+
+const canvas = document.getElementById('canvas3d');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/sCGBQNfHpjAvlY2M/scene.splinecode');
