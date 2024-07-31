@@ -177,22 +177,6 @@ li {
     display: none;
 }
 
-#cv {
-    padding: 1rem;
-    font-family: "Staatliches", cursive;
-    font-size: clamp(1.5rem, 8vw, 1.2rem);
-    background-color: var(--blue);
-    color: var(--scheme-color);
-    border: none;
-    width: 50%;
-    border-radius: 30px;
-}
-
-#cv:hover {
-    background-color: #212121;
-    color: var(--blue);
-}
-
 .wrap {
     display: none;
 }
@@ -292,6 +276,22 @@ footer svg {
 #links {
     width: 83vw;
     margin: 0 auto;
+}
+
+#cv {
+    padding: 1rem;
+    font-family: "Staatliches", cursive;
+    font-size: clamp(1.5rem, 8vw, 1.2rem);
+    background-color: var(--blue);
+    color: var(--scheme-color);
+    border: none;
+    width: 50%;
+    border-radius: 30px;
+}
+
+#cv:hover {
+    background-color: #212121;
+    color: var(--blue);
 }
 
 @media (hover: hover) and (pointer: fine) {
